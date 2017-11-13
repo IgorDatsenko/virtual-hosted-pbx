@@ -1,0 +1,37 @@
+extends _modules/layout
+include _modules/header
+include _modules/menu
+include _modules/about
+include _modules/news
+include _modules/videos
+include _modules/albums
+include _modules/photos
+include _modules/shows
+include _modules/store
+include _modules/popup
+include _modules/footer
+block body
+  -var main = true
+  //wrapper starts
+  .wrapper.main-page
+    //header starts
+    +header
+    +menu
+    //header ends
+    //main starts
+    main.main
+      +about
+      +news
+      +videos
+      +albums
+      +photos
+      +shows
+      +store
+
+    //main ends
+    //footer starts
+    +footer
+    .is-hidden
+      +popup
+    //footer ends
+  //wrapper ends

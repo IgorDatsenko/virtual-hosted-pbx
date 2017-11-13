@@ -1,0 +1,23 @@
+//
+// Icons
+// --------------------------------------------------
+
+$icons: sprite-map('icons/*.png', $layout: vertical, $spacing: 10px);
+$retina: sprite-map('icons2x/*.png', $layout: vertical, $spacing: 4px);
+
+// Base icon styles
+// --------------------------------------------------
+
+[class^="ico"] {
+  background: $icons;
+  display: inline-block;
+  vertical-align: middle;
+}
+@each $i in sprite_names($icons) {
+  .ico-#{$i} {
+    @include sprite-dimensions($icons, $i);
+    background-position: sprite-position($icons, $i);
+
+    @include retina-sprite-background($i, $retina);
+  }
+}

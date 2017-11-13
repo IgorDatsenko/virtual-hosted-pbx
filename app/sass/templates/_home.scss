@@ -1,0 +1,39 @@
+//
+//
+// --------------------------------------------------
+
+
+body {}
+
+.wrapper {
+  overflow: hidden;
+  .nav-fixed & {
+    @media screen and (min-width: $xl-breakpoint ) {
+      padding-top: 61px;
+    }
+  }
+}
+
+.main {
+  transition: transform .2s;
+  .has-visible-nav & {
+    @include transform(translateX(60%));
+    //@media only screen and (min-width: map-get($breakpoints, small) + 366px) {@include transform(translateX(-319px));}
+    //@media only screen and (min-width: map-get($breakpoints, large-medium)) {@include transform(translateX(0));}
+  }
+}
+
+.no-scroll {
+  bottom: 0;
+  left: 0;
+  overflow: hidden !important;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.wrapper.main-page {
+  .container {
+    max-width: 1300px;
+  }
+}

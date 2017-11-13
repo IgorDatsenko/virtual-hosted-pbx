@@ -1,0 +1,11 @@
+mixin replaceTpl(environment)
+  != "\n\r  <!-- build:template"
+  != "\n\r  <% if (environment === '" + environment + "') { %>"
+  block
+  != "\n\r  <% } %>"
+  != "\n\r  /build -->"
+
+mixin ieTpl
+  != "\n\r  <!-- build:template"
+  != "\n\r  <%= ie %>"
+  != "\n\r  /build -->"

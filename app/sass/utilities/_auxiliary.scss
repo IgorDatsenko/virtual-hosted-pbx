@@ -1,0 +1,98 @@
+//
+// Auxiliary
+// --------------------------------------------------
+
+// Visibility
+// -------------------------
+
+.is-hidden {display: none !important;}
+.is-visible {display: block !important;}
+
+// Horizontal alignment
+// -------------------------
+
+.align-left {float: left !important;}
+.align-right {float: right !important;}
+.text-left {text-align: left !important;}
+.text-center {text-align: center !important;}
+.text-right {text-align: right !important;}
+
+// Vertical alignment
+// -------------------------
+
+.item-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.item-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+// Accessibility
+// -------------------------
+
+.accessibility {
+  left: -9999px;
+  position: absolute;
+  top: 0;
+}
+
+// Images
+// -------------------------
+
+.responsive-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.placeholder-img {display: block;}
+
+// Embed
+// -------------------------
+
+.embed-responsive {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+
+  .embed-responsive-item,
+  iframe,
+  embed,
+  object,
+  video {
+    border: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.scroll-holder {
+  height: 100%;
+  overflow: auto;
+}
+
+// Modifier class for 16:9 aspect ratio
+.embed-responsive-16by9 {padding-bottom: 56.25%;}
+
+// Modifier class for 4:3 aspect ratio
+.embed-responsive-4by3 {padding-bottom: 75%;}
+
+// Helpers
+// -------------------------
+
+%clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}

@@ -1,0 +1,60 @@
+include ../_dev/common
+include ../_atoms/common
+doctype html
+= "\n\r"
+<html lang="en">
+head
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+  title= projectName
+  block fonts
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900")
+  // build:remove&nbsp;
+  block bowerStyles
+    link(rel="stylesheet", href="../bower_components/swiper/dist/css/swiper.css")
+    link(rel="stylesheet", href="../bower_components/fancybox/source/jquery.fancybox.css")
+  // /build
+  +replaceTpl('markup')
+    block markupStyles
+      link(rel="stylesheet", href="css/swiper.css")
+      link(rel="stylesheet", href="css/fancybox/jquery.fancybox.css")
+  // build:css:build css/and-the-hang-nails.min.css
+  block styles
+    link(rel="stylesheet", href="css/all.css")
+  // /build
+  = "\n\r  "
+  | <!--[if IE 9]>
+  link(rel="stylesheet", href="css/ie9.css")
+  = "\n\r  "
+  | <![endif]-->
+
+  +ieTpl
+body
+  block body
+  // build:remove&nbsp;
+  block bowerScripts
+    script(src="../bower_components/jquery/dist/jquery.min.js")
+    script(src="../bower_components/jquery-placeholder/jquery.placeholder.js")
+    script(src="../bower_components/swiper/dist/js/swiper.js")
+    script(src="../bower_components/jquery-mousewheel/jquery.mousewheel.js")
+    script(src="../bower_components/fancybox/source/jquery.fancybox.pack.js")
+  // /build
+  +replaceTpl('markup')
+    block markupScripts
+      script(src="js/plugins/jquery.min.js")
+      script(src="js/plugins/jquery.placeholder.min.js")
+      script(src="js/plugins/swiper.min.js")
+      script(src="js/plugins/jquery.mousewheel.min.js")
+      script(src="js/plugins/jquery.fancybox.min.js")
+  // build:remove:build
+  //include plugins
+  block pluginsScripts
+    script(src="js/1-jquery.utilities.js")
+  //init plugins
+  block initScripts
+    script(src="js/jquery.init-plugins.js")
+    script(src="js/jquery.common.js")
+  // /build
+  +replaceTpl('build')
+    script(src="js/and-the-hang-nails.min.js")
+!= "\n\r</html>"

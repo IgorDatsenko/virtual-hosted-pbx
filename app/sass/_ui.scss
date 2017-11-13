@@ -1,0 +1,141 @@
+//
+// UI
+// --------------------------------------------------
+
+// UI layout
+// --------------------------------------------------
+
+// UI container
+.ui-container {
+  padding: 0 20px;
+}
+
+// UI header
+.ui-header {
+  background: $brand-primary-light;
+  left: 0;
+  padding-bottom: $padding-large-vertical;
+  padding-top: $padding-large-vertical;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  z-index: 99;
+}
+.btn-sidebar-toggle {
+  position: fixed;
+  right: 12px;
+  top: 12px;
+  z-index: 100;
+}
+.ui-logo {margin: 0 auto $padding-large-vertical;}
+.ui-header-title {
+  color: $white;
+  font-size: $font-size-h1;
+}
+
+// UI main
+.ui-main {
+  padding: 162px 0 $padding-large-vertical;
+}
+.ui-main-title {
+  border-bottom: 1px solid $brand-primary-light;
+  display: block;
+  font-family: $headings-font-family;
+  font-size: $font-size-h1;
+  margin-bottom: $padding-large-vertical;
+  padding-bottom: $padding-large-vertical;
+}
+.ui-title {
+  color: $brand-primary-light;
+  display: block;
+  font-family: $headings-font-family;
+  font-size: $font-size-h2;
+  margin-bottom: $padding-large-vertical;
+  padding-top: $padding-large-vertical;
+}
+.ui-sub-title {
+  display: block;
+  font-family: $headings-font-family;
+  font-size: $font-size-h3;
+  margin-bottom: $padding-large-vertical;
+  padding-top: $padding-large-vertical;
+}
+
+// Color palette block styles
+.ui-color-box {
+  @include border-radius($border-radius-small);
+  border: 1px solid $gray-lighter;
+  margin: $padding-base-vertical;
+  padding: $padding-base-vertical;
+  text-align: center;
+}
+.ui-color-heading {
+  display: block;
+  font-family: $headings-font-family;
+  font-size: $font-size-h4;
+  .ui-color-primary & {color: $brand-primary;}
+  .ui-color-primary-light & {color: $brand-primary-light;}
+  .ui-color-success & {color: $brand-success;}
+  .ui-color-info & {color: $brand-info;}
+  .ui-color-warning & {color: $brand-warning;}
+  .ui-color-danger & {color: $brand-danger;}
+}
+.ui-color-box-example {
+  height: 200px;
+  .ui-color-primary & {background: $brand-primary;}
+  .ui-color-primary-light & {background: $brand-primary-light;}
+  .ui-color-success & {background: $brand-success;}
+  .ui-color-info & {background: $brand-info;}
+  .ui-color-warning & {background: $brand-warning;}
+  .ui-color-danger & {background: $brand-danger;}
+}
+
+// UI Sidebar
+.ui-sidebar {
+  @include box-shadow(0 0 10px rgba($black, .5));
+  @include transform(translate(-102%, 0));
+  @include transition(transform .3s);
+  background: $white;
+  bottom: 0;
+  padding: 60px 20px 20px 20px;
+  position: fixed;
+  top: 0;
+  width: 151px;
+  z-index: 101;
+  @media only screen and (min-width: $xl-breakpoint) {
+    padding-top: 20px;
+    width: 200px;
+  }
+  // styles for shown sidebar
+  #wrapper.active & {
+    @include transform(translate(0, 0));
+    .scroll-holder {overflow: auto;}
+  }
+  .frame {
+    height: 100%;
+    position: relative;
+  }
+  .scroll-holder {
+    overflow: hidden;
+    @media only screen and (min-width: $xl-breakpoint) {overflow: auto;}
+    h3:first-child {
+      margin-top: 0;
+      @media only screen and (min-width: $xl-breakpoint) {margin-top: 23px;}
+    }
+  }
+}
+
+// Sidebar toggle
+.btn-sidebar-toggle {
+  outline: none;
+  padding: 9px 10px;
+  .icon-bar {
+    background: $gray-dark;
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    margin-top: 4px;
+    width: 22px;
+    &:first-child {margin-top: 0;}
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "and-the-hang-nails",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.2.*",
+    "jquery-placeholder": "~2.3.*",
+    "swiper": "^3.4.1",
+    "fancybox": "^2.1.6",
+    "jquery-mousewheel": "^3.1.13"
+  },
+  "files": {
+    "retina.js": {
+      "js": {
+        "cwd": "dist/",
+        "paths": [
+          "retina.js"
+        ]
+      }
+    },
+    "jquery-placeholder": {
+      "js": {
+        "cwd": "",
+        "paths": [
+          "jquery.placeholder.js"
+        ]
+      }
+    },
+    "fancybox": {
+      "js": {
+        "cwd": "source/",
+        "paths": [
+          "{,helpers/}*.js",
+          "!jquery.fancybox.pack.js"
+        ]
+      },
+      "css": {
+        "cwd": "source/",
+        "paths": [
+          "{,helpers/}*.css"
+        ],
+        "dest": "css/fancybox/"
+      },
+      "images": {
+        "cwd": "source/",
+        "paths": [
+          "{,helpers/}*.{gif,png}"
+        ],
+        "dest": "css/fancybox/"
+      },
+      "other": []
+    }
+  },
+  "devDependencies": {}
+}

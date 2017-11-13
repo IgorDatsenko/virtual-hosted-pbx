@@ -1,0 +1,147 @@
+//
+// Layout
+// --------------------------------------------------
+
+// Grid base setup
+// --------------------------------------------------
+
+// Grid basic variables
+$width: 1024px;
+$gutter: 20px;
+$columns: 12;
+$column-width: $width / $columns;
+$flexible-column-width: 100% / $columns;
+
+
+// Grid breakpoint variables
+$xs-breakpoint-columns: 12;
+$sm-breakpoint-columns: 12;
+$md-breakpoint-columns: 12;
+$lg-breakpoint-columns: 12;
+$xl-breakpoint-columns: 12;
+
+// Grid breakpoint name variables
+$xs-breakpoint-name: 'xs';
+$sm-breakpoint-name: 'sm';
+$md-breakpoint-name: 'md';
+$lg-breakpoint-name: 'lg';
+$xl-breakpoint-name: 'xl';
+
+// Layout base blocks
+// --------------------------------------------------
+
+.wrapper { width: 100%;}
+.header {width: 100%;}
+.main {width: 100%;}
+.footer {width: 100%;}
+.container {
+  margin: 0 auto;
+  padding: 0 $gutter / 2;
+  &:after {@extend %clearfix;}
+}
+
+// Grid row setup
+.grid-row {
+  margin-bottom: $padding-large-vertical;
+  margin-left: -($gutter / 2);
+  margin-right: -($gutter / 2);
+  position: relative;
+  &:after {@extend %clearfix;}
+  &.no-indent {margin: 0;}
+  // Styles for sample columns in ui
+  .pre {
+    @include border-radius($border-radius-base);
+    background: $gray-light;
+    text-align: center;
+    padding: $padding-large-vertical $padding-base-horizontal;
+    .is-desktop &:hover {background: $gray-base;}
+  }
+}
+
+// Grid col setup
+[class^="grid-col-"] {
+  @include box-sizing(border-box);
+}
+
+// Grid mixins
+@mixin generate-grid($breakpoint-name, $breakpoint, $breakpoint-columns) {
+  @if $breakpoint == 320px {
+
+    // Generate classes for elements displaying
+    .#{$breakpoint-name}-hidden {
+      display: none !important;
+    }
+    .#{$breakpoint-name}-visible {
+      display: block !important;
+    }
+
+    // Generate container styles
+    .container {max-width: $column-width * $breakpoint-columns;}
+
+    // Generate columns classes
+    @for $i from 1 to $columns + 1 {
+      .grid-col-#{$breakpoint-name}-#{$i} {
+        float: left;
+        padding: 0 $gutter / 2;
+        width: $i * $flexible-column-width;
+      }
+    }
+
+    // Generate push and pull classes
+    @for $i from 1 to $columns + 1 {
+      .grid-prepend-#{$breakpoint-name}-#{$i} {
+        margin-left: $i * $flexible-column-width;
+      }
+    }
+    @for $i from 1 to $columns + 1 {
+      .grid-append-#{$breakpoint-name}-#{$i}{
+        margin-right: $i * $flexible-column-width;
+      }
+    }
+
+  }
+  @else {
+    @media only screen and (min-width: $breakpoint) {
+
+      // Generate classes for elements display options
+      .is-#{$breakpoint-name}-hidden {
+        display: none !important;
+      }
+      .is-#{$breakpoint-name}-visible {
+        display: block !important;
+      }
+
+      // Generate container styles
+      .container {max-width: $column-width * $breakpoint-columns;}
+
+      // Generate columns classes
+      @for $i from 1 to $columns + 1 {
+        .grid-col-#{$breakpoint-name}-#{$i} {
+          float: left;
+          padding: 0 $gutter / 2;
+          width: $i * $flexible-column-width;
+        }
+      }
+
+      // Generate push and pull classes
+      @for $i from 1 to $columns + 1 {
+        .grid-prepend-#{$breakpoint-name}-#{$i} {
+          margin-left: $i * $flexible-column-width;
+        }
+      }
+      @for $i from 1 to $columns + 1 {
+        .grid-append-#{$breakpoint-name}-#{$i}{
+          margin-right: $i * $flexible-column-width;
+        }
+      }
+
+    }
+  }
+}
+
+// Grid generation
+@include generate-grid($xs-breakpoint-name, $xs-breakpoint, $xs-breakpoint-columns);
+@include generate-grid($sm-breakpoint-name, $sm-breakpoint, $sm-breakpoint-columns);
+@include generate-grid($md-breakpoint-name, $md-breakpoint, $md-breakpoint-columns);
+@include generate-grid($lg-breakpoint-name, $lg-breakpoint, $lg-breakpoint-columns);
+@include generate-grid($xl-breakpoint-name, $xl-breakpoint, $xl-breakpoint-columns);

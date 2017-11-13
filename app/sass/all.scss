@@ -1,0 +1,46 @@
+$debug-browser-support: true;
+$browser-minimum-versions: (
+  "chrome": null,
+  "firefox": null,
+  "ie": "9",
+  "safari": null,
+  "opera": null
+);
+
+$critical-usage-threshold: 100;
+$graceful-usage-threshold: 100;
+//
+// Global imports
+// --------------------------------------------------
+
+// External imports
+// --------------------------------------------------
+
+@import "compass/css3";
+@import "compass/typography/text/ellipsis";
+@import "compass/utilities/sprites";
+
+// Internal imports
+// --------------------------------------------------
+
+// General components
+@import "utilities/index";
+@import "layout";
+@import "typography";
+
+// Modules
+
+// Atoms
+@import "atoms/index";
+
+// Molecules
+@import "molecules/index";
+
+// Organisms
+@import "organisms/index";
+
+// Templates
+@import "templates/index";
+
+// UI styles for styleguide presentation
+@import "ui";

@@ -1,0 +1,22 @@
+//
+// Block
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.block {
+  background: darken($gray-dark, 4%);
+  margin-bottom: 20px;
+  padding: 20px 29px 2px;
+  a {color: #1a0000;}
+}
+
+// Block modifications
+// --------------------------------------------------
+
+.block-white {
+  background: $white;
+  color: #1a0000;
+  padding-top: 25px;
+}

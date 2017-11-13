@@ -1,0 +1,93 @@
+//
+// Social icons
+// --------------------------------------------------
+
+.soc-icons {
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0 0 ;
+  @media screen and (min-width: $lg-breakpoint) {
+    padding: 0;
+  }
+}
+
+.soc-icons-item {
+  display: inline-block;
+}
+
+.soc-icons-item + .soc-icons-item {
+  margin-left: 1px;
+  @media screen and (min-width: $lg-breakpoint) {
+    margin-left: 5px;
+  }
+}
+
+.twitter {
+  @include sprite-dimensions($icons, twitter-small);
+  background: $icons;
+  background-position: sprite-position($icons, twitter-small);
+  @include retina-sprite-background(twitter-small, $retina);
+  display: block;
+  @media screen and (min-width: $lg-breakpoint) {
+    @include sprite-dimensions($icons, twitter);
+    background: $icons;
+    background-position: sprite-position($icons, twitter);
+    @include retina-sprite-background(twitter, $retina);
+  }
+}
+
+.fabecook {
+  @include sprite-dimensions($icons, fabecook-small);
+  background: $icons;
+  background-position: sprite-position($icons, fabecook-small);
+  @include retina-sprite-background(fabecook-small, $retina);
+  display: block;
+  @media screen and (min-width: $lg-breakpoint) {
+    @include sprite-dimensions($icons, fabecook);
+    background: $icons;
+    background-position: sprite-position($icons, fabecook);
+    @include retina-sprite-background(fabecook, $retina);
+  }
+}
+
+.instagram {
+  @include sprite-dimensions($icons, instagram-small);
+  background: $icons;
+  background-position: sprite-position($icons, instagram-small);
+  @include retina-sprite-background(instagram-small, $retina);
+  display: block;
+  @media screen and (min-width: $lg-breakpoint) {
+    @include sprite-dimensions($icons, instagram);
+    background: $icons;
+    background-position: sprite-position($icons, instagram);
+    @include retina-sprite-background(instagram, $retina);
+  }
+}
+
+.youtube {
+  @include sprite-dimensions($icons, youtube-icon-small);
+  background: $icons;
+  background-position: sprite-position($icons, youtube-icon-small);
+  @include retina-sprite-background(youtube-icon-small, $retina);
+  display: block;
+  @media screen and (min-width: $lg-breakpoint) {
+    @include sprite-dimensions($icons, youtube);
+    background: $icons;
+    background-position: sprite-position($icons, youtube);
+    @include retina-sprite-background(youtube, $retina);
+  }
+}
+
+.soundcloud {
+  @include sprite-dimensions($icons, soundcloud-small);
+  background: $icons;
+  background-position: sprite-position($icons, soundcloud-small);
+  @include retina-sprite-background(soundcloud-small, $retina);
+  display: block;
+  @media screen and (min-width: $lg-breakpoint) {
+    @include sprite-dimensions($icons, soundcloud);
+    background: $icons;
+    background-position: sprite-position($icons, soundcloud);
+    @include retina-sprite-background(soundcloud, $retina);
+  }
+}

@@ -1,0 +1,106 @@
+//
+// Navigation styles
+// --------------------------------------------------
+
+.nav {
+  background-color: $bg-grey-dark;
+  color: $text-white;
+  text-align: center;
+  .nav-fixed & {
+    @media screen and (min-width: $xl-breakpoint ) {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+  }
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  @include clearfix;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  @media screen and (max-width: $xl-breakpoint ) {
+    position: absolute;
+    flex-direction: column;
+    background-color: #333;
+    top: 0;
+    bottom: 0;
+    left: -60%;
+    width: 60%;
+    transition: transform .2s;
+  }
+  @media screen and (min-width: 920px) and (max-width: 990px){
+    position: static;
+    flex-direction: row;
+    .nav-list-item {
+
+    }
+  }
+  .has-visible-nav & {
+    @media screen and (max-width: $xl-breakpoint ) {
+      @include transform(translateX(100%));
+    }
+  }
+  @media screen and (min-width: $xl-breakpoint ) {
+    justify-content: center;
+  }
+}
+
+.nav-list-item {
+  margin: 0;
+}
+
+.nav-link {
+  color: $text-white;
+  display: block;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1;
+  padding: 25px 19px 21px;
+  @media screen and (max-width: 375px) {
+    padding: 15px 19px 15px;
+  }
+  &:hover,
+  &:focus {
+    color: $text-white;
+  }
+  &:hover,
+  &.active{
+    color: $text-purple;
+    background-color: $bg-yellow;
+  }
+}
+.nav-list-item + .nav-list-item {
+  border-top: 1px solid #222;
+  @media screen and (min-width: $lg-breakpoint) {
+    border-left: 1px solid #222;
+    border-top: none;
+  }
+  @media screen and (min-width: 920px) and (max-width: 990px) {
+    border-left: 1px solid #222;
+    border-top: none;
+  }
+}
+
+.btn-nav {
+  background-color: #333;
+  text-align: center;
+  z-index: 10;
+  top: 15px;
+  right: 14px;
+  position: absolute;
+  padding: 7px 5px;
+  border-radius: 5px;
+  @media screen and (min-width: $lg-breakpoint) {
+    top: 30px;
+    right: 30px;
+  }
+  @media screen and (min-width: $xl-breakpoint) {
+    display: none;
+  }
+}

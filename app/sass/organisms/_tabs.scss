@@ -1,0 +1,18 @@
+//
+// Tabs
+// --------------------------------------------------
+
+.tabs {overflow: hidden;}
+.tabs-content {
+  width: 100%;
+  .block {
+    @media only screen and (min-width: $md-breakpoint) {min-height: 158px;}
+  }
+  @media only screen and (min-width: $md-breakpoint) {float: right;}
+}
+.tab {
+  display: none;
+  margin-bottom: -10px;
+  position: relative;
+}
+.tab-is-active {display: block;}
