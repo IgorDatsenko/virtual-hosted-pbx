@@ -386,7 +386,7 @@ var tasks = {
       server: {
         baseDir: './'
       },
-      startPath: paths.dev.folder + 'ui.html'
+      startPath: paths.dev.folder + 'index.html'
     });
   },
   watch: function() {
