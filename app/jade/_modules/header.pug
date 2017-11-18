@@ -1,23 +1,6 @@
 include ../_atoms/logo
 include ../_atoms/soc-icons
 mixin header
-  if main
-    header.header.header-with-bg
-      +logo
-      +soc-icons
-      a.arrow-down-scroll(href='#about', data-scroll-to)
-        .item-table
-          .item-cell
-            span.ico-arrow-down
-  else
-    header.header
-      .container
-        .top-line
-          .left-side
-            +logo
-          .middle-side
-            h1.page-title #{pageHeader}
-          .right-side
-            .item-table
-              .item-cell
-                +soc-icons
+  header.header
+    .container
+

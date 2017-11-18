@@ -3,43 +3,43 @@
 // --------------------------------------------------
 
 .logo-main {
-  @include sprite-dimensions($icons, logo-small);
+  @include sprite-dimensions($icons, logo);
   background: $icons;
-  background-position: sprite-position($icons, logo-small);
-  @include retina-sprite-background(logo-small, $retina);
+  background-position: sprite-position($icons, logo);
+  @include retina-sprite-background(logo, $retina);
   display: block;
   margin: 0;
   overflow: hidden;
   text-indent: -9999px;
-  @media screen and (min-width: $lg-breakpoint) {
-    @include sprite-dimensions($icons, logo);
-    background: $icons;
-    background-position: sprite-position($icons, logo);
-    @include retina-sprite-background(logo, $retina);
-  }
+  //@media screen and (min-width: $lg-breakpoint) {
+  //  @include sprite-dimensions($icons, logo);
+  //  background: $icons;
+  //  background-position: sprite-position($icons, logo);
+  //  @include retina-sprite-background(logo, $retina);
+  //}
   a {
     display: block;
     height: 100%;
   }
 }
 
-.logo-middle {
-  @include sprite-dimensions($icons, logo-small);
-  background: $icons;
-  background-position: sprite-position($icons, logo-small);
-  @include retina-sprite-background(logo-small, $retina);
-  display: block;
-  margin: 0;
-  overflow: hidden;
-  text-indent: -9999px;
-  @media screen and (min-width: $lg-breakpoint) {
-    @include sprite-dimensions($icons, logo-middle);
-    background: $icons;
-    background-position: sprite-position($icons, logo-middle);
-    @include retina-sprite-background(logo-middle, $retina);
-  }
-  a {
-    display: block;
-    height: 100%;
-  }
-}
+//.logo-middle {
+//  @include sprite-dimensions($icons, logo-small);
+//  background: $icons;
+//  background-position: sprite-position($icons, logo-small);
+//  @include retina-sprite-background(logo-small, $retina);
+//  display: block;
+//  margin: 0;
+//  overflow: hidden;
+//  text-indent: -9999px;
+//  @media screen and (min-width: $lg-breakpoint) {
+//    @include sprite-dimensions($icons, logo-middle);
+//    background: $icons;
+//    background-position: sprite-position($icons, logo-middle);
+//    @include retina-sprite-background(logo-middle, $retina);
+//  }
+//  a {
+//    display: block;
+//    height: 100%;
+//  }
+//}

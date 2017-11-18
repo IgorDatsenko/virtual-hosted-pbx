@@ -13,42 +13,6 @@
   .has-visible-nav & {
     @include transform(translateX(60%));
   }
-  &.header-with-bg {
-    @include clearfix;
-    background-image: url(../images/backgrounds/bg-header-small.jpg);
-    background-position: center center;
-    background-size: cover;
-    box-sizing: border-box;
-    height: 275px;
-    padding: 13px 30px 0 21px;
-    max-width: 1440px;
-    margin: 0 auto;
-    @media screen and (min-width: 375px) {
-      background-position: center -18px;
-    }
-    @media screen and (min-width: 550px) {
-      background-position: center center;
-    }
-    @media screen and (min-width: $lg-breakpoint) {
-      background-image: url(../images/backgrounds/bg-header.jpg);
-      background-position: center 21px;
-      padding: 29px 30px 0 38px;
-      height: 780px;
-    }
-    @media screen and (min-width: $xl-breakpoint) {
-      background-position: center center;
-    }
-    .soc-icons {
-      clear: both;
-      @media screen and (min-width: $xl-breakpoint) {
-        float: right;
-        clear: none;
-      }
-    }
-    .logo-main {
-      float: left;
-    }
-  }
 }
 
 @include keyframes(bounce) {
