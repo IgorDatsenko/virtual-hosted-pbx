@@ -1,6 +1,7 @@
 include ../_atoms/logo
-include ../_atoms/soc-icons
+include menu
 mixin header
   header.header
-    .container
-
+    .header__holder
+      +logo()
+      +menu()

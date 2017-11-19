@@ -3,17 +3,17 @@ include _modules/header
 include _modules/menu
 include _modules/popup
 include _modules/footer
+include _modules/intro
 block body
   -var main = true
   //wrapper starts
-  .wrapper
+  .wrapper.main-page
     //header starts
     +header
-    +menu
     //header ends
     //main starts
     main.main
-
+      +intro('virtual hosted pbx')
     //main ends
     //footer starts
     +footer
