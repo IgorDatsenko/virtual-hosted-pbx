@@ -5,4 +5,11 @@
   width: 100%;
   display: block;
   content: '';
+  &.full {
+    width: 100%;
+  }
+  &.w250 {
+    width: 250px;
+    margin: 0 auto;
+  }
 }
