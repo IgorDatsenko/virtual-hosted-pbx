@@ -8,6 +8,10 @@
   text-align: center;
   font-size: 20px;
   font-family: Verdana;
+  .main-page & {
+    color: #fff;
+    background-color: transparent;
+  }
 }
 
 .nav-list {
@@ -26,6 +30,13 @@
   text-align: center;
   font-size: 20px;
   font-family: Verdana;
+  .main-page & {
+    color: #fff;
+    background-color: transparent;
+    &:hover {
+      color: #df0451;
+    }
+  }
 }
 
 .nav-list-item + .nav-list-item {

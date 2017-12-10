@@ -4,6 +4,8 @@ include _modules/menu
 include _modules/popup
 include _modules/footer
 include _modules/intro
+include _modules/whoWeAre
+include _modules/divider
 block body
   -var main = true
   //wrapper starts
@@ -14,6 +16,8 @@ block body
     //main starts
     main.main
       +intro('virtual hosted pbx')
+      +divider('full')
+      +whoWeAre
     //main ends
     //footer starts
     +footer

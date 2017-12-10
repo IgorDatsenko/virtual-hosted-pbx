@@ -3,7 +3,9 @@
 // --------------------------------------------------
 
 .header {
-
+  .main-page & {
+    position: absolute;
+  }
 }
 
 .header__holder {
