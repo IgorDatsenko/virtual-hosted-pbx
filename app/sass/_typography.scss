@@ -76,32 +76,7 @@ p {margin: 0 0 ($line-height-computed / 2);}
   margin-bottom: $line-height-computed;
 }
 
-.purple-title-with-bg {
-  @include box-sizing(border-box);
-  background-image: url(../images/backgrounds/bg-heading-purple-small.png);
-  background-repeat: no-repeat;
-  color: $text-white;
-  display: inline-block;
-  font-size: 30px;
-  font-weight: 900;
-  height: 52px;
-  margin-bottom: 20px;
-  margin-top: 5px;
-  padding: 10px 0;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle;
-  width: 185px;
-  @media screen and (min-width: $lg-breakpoint) {
-    background-image: url(../images/backgrounds/bg-heading-purple.png);
-    font-size: 61px;
-    width: 369px;
-    height: 101px;
-    padding: 18px 0;
-    margin-top: 41px;
-    margin-bottom: 38px;
-  }
-}
+
 
 a {
   font-size: 13px;
