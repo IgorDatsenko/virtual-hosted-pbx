@@ -1,0 +1,16 @@
+
+mixin questions-form
+  form.questions-form(action='#')
+    .questions-form__input-group
+      label.questions-form__label(for='name') Name
+      input.questions-form__input(type='text', id='name' placeholder='Name')
+    .questions-form__input-group
+      label.questions-form__label(for='phone-number') Phone number
+      input.questions-form__input(type='text', id='phone-number' placeholder='Phone number')
+    .questions-form__input-group
+      label.questions-form__label(for='email') Email
+      input.questions-form__input(type='email', id='email' placeholder='Email')
+    .questions-form__input-group
+      label.questions-form__label(for='message') Message
+      textarea.questions-form__textarea(id='message' placeholder='Message')
+    button.questions-form__submit(type='submit') submit

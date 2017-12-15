@@ -1,0 +1,75 @@
+
+.questions-form {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+
+  &__input-group {
+
+  }
+  &__label {
+    display: none;
+  }
+  &__input {
+    width: 100%;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: left;
+    color: #000;
+    height: 23px;
+    box-shadow: none;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    background-color: transparent;
+    outline: none;
+    box-sizing: border-box;
+    &::placeholder {
+      color: #000;
+    }
+    &:focus {
+      border-bottom: 1px solid rgba(0, 0, 0, 1);
+    }
+  }
+  &__textarea {
+    resize: none;
+    width: 100%;
+    box-shadow: none;
+    border: 0;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: left;
+    color: #000000;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    background-color: transparent;
+    outline: none;
+    height: 118px;
+    display: block;
+    overflow: auto;
+    box-sizing: border-box;
+    &::placeholder {
+      color: #000;
+    }
+    &:focus {
+      border-bottom: 1px solid rgba(0, 0, 0, 1);
+    }
+  }
+  &__submit {
+    @include sprite-dimensions($icons, submit-btn);
+    background: $icons;
+    background-position: sprite-position($icons, submit-btn);
+    @include retina-sprite-background(submit-btn, $retina);
+
+    position: absolute;
+    right: -50px;
+    bottom: 0;
+    text-indent: -99999px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+.questions-form__input-group + .questions-form__input-group {
+  margin-top: 33px;
+}

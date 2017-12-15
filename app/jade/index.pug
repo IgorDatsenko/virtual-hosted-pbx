@@ -8,6 +8,7 @@ include _modules/divider
 include _modules/advantages
 include _modules/additionTools
 include _modules/info-block
+include _modules/questions-section
 block body
   -var main = true
   //wrapper starts
@@ -31,10 +32,10 @@ block body
         content: ['Because your business is unique, you need partners who will work with you to meet your exact needs. VirtualPBX plans are designed to serve companies all the way from inception to IPO and everything in between.Because your business is unique, you need partners who will work with you to meet your exact needs. VirtualPBX plans are designed to serve companies all the way from inception to IPO and everything in between.'],
         button: [true, 'COMPARE PLANS & PRICES', '#', 'btn-purple']
       }, '')
+      +questions-section
     //main ends
     //footer starts
     +footer
     .is-hidden
-      +popup
-    //footer ends
+    footer ends
   //wrapper ends
