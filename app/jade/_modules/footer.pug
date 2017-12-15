@@ -2,47 +2,21 @@ include copyright
 mixin footer
   footer.footer
     .container
-      .footer-holder
-        .site-map
-          h3.footer-title SITE MAP
-          ul.site-map-list
-            li.site-map-item: a.site-map-link(href="#" data-scroll-to) Home
-            li.site-map-item: a.site-map-link(href="#about" data-scroll-to) About
-            li.site-map-item: a.site-map-link(href="news.html") News
-            li.site-map-item: a.site-map-link(href="#albums" data-scroll-to) Albums
-            li.site-map-item: a.site-map-link(href="#videos" data-scroll-to) Videos
-            li.site-map-item: a.site-map-link(href="#photos" data-scroll-to) Photos
-            li.site-map-item: a.site-map-link(href="#shows" data-scroll-to) Shows
-            li.site-map-item: a.site-map-link(href="#store" data-scroll-to) Store
-            li.site-map-item: a.site-map-link(href="#contact" data-scroll-to) Contact
-        #contact.contacts
-          h3.footer-title CONTACT US
-          .contacts-item
-            h4.contacts-item-title Band
-            span.contacts-item-description: a.contacts-item-link(href='mailto:andthehangnails@gmail.com') andthehangnails@gmail.com
-          .contacts-item
-            h4.contacts-item-title Members
-            span.contacts-item-description Martyn -
-              a.contacts-item-link(href='mailto:martynpages@yahoo.co.uk')  martynpages@yahoo.co.uk
-            span.contacts-item-description Steven -
-              a.contacts-item-link(href='mailto:kingreidy@gmail.com')  kingreidy@gmail.com
-          .contacts-item
-            h4.contacts-item-title Label
-            span.contacts-item-description: a.contacts-item-link(href='mailto:bonerecords@gmail.com') bonerecords@gmail.com
-          .contacts-item
-            h4.contacts-item-title Booking
-            .contacts-item-description: a.contacts-item-link(href='mailto:budheronpromo@gmail.com') budheronpromo@gmail.com
-        .subscribe
-          h3.footer-title NEWSLETTER
-          form.subscribe-form(action='#')
-            .form-group
-              label.input-label(for='email') Email Address
-              input.form-input(type='email' id='email')
-            .form-group
-              label.input-label(for='f-name') First Name
-              input.form-input(type='text' id='f-name')
-            .form-group
-              label.input-label(for='surname') Surname
-              input.form-input(type='text' id='surname')
-            button.btn-purple.btn-submit(type='submit') SUBSCRIBE
+      .footer__holder
+        .col-1
+          a(href='#')
+            i.ico.ico-logo-footer
+        .col-2
+          h3.services-footer__title Services
+          ul.services-footer__list
+            li.services-footer__item Virtual hosted IP PBX
+            li.services-footer__item IP PBX on your (V) Machine
+            li.services-footer__item Connector to CRM
+            li.services-footer__item Developers consulting
+        .col-3
+          ul.nav-footer
+            li.nav-footer__item: a.nav-footer__link(href='#') Features
+            li.nav-footer__item: a.nav-footer__link(href='#') Screenshots
+            li.nav-footer__item: a.nav-footer__link(href='#') F.A.Q
+            li.nav-footer__item: a.nav-footer__link(href='#') Contacts
     +copyright
