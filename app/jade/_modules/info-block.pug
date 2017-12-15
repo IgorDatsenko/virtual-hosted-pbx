@@ -1,0 +1,11 @@
+include divider
+
+mixin info-block(data, blockClass)
+  section.info-block(class = blockClass)
+    .container
+      h2.info-block__title=  data.title
+      each item in data.content
+        p= item
+      if data.button[0]
+        a.btn(href=data.button[2] class=data.button[3])=  data.button[1]
+      +divider('w250')

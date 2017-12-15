@@ -1,0 +1,37 @@
+
+.info-block {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 50px 0 60px;
+  color: #000;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 37px;
+    font-size: 40px;
+    text-align: center;
+    color: #000;
+    font-weight: 400;
+  }
+  p {
+    margin-bottom: 36px;
+  }
+  .btn {
+    margin-bottom: 40px;
+  }
+}
+
+.info-block.with-purple-bg {
+  background-image: url(../images/backgrounds/bg-who-we-aret.jpg);
+  background-size: cover;
+  background-color: #b13c4e;
+  color: #fff;
+
+  .info-block__title {
+    color: #fff;
+  }
+  p {
+    color: #fff;
+  }
+}
