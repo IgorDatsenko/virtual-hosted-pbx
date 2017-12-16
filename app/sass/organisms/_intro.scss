@@ -5,21 +5,20 @@
 
   &__holder {
     @extend .container;
-    height: 750px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+    justify-content: center;
   }
   &__title {
-    text-align: center;
-    font-family: Verdana;
-    font-size: 60px;
     color: #fff;
-    text-transform: uppercase;
-    margin: 0;
+    font-size: 60px;
     line-height: 1;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
   }
   .ico {
     margin-bottom: 55px;

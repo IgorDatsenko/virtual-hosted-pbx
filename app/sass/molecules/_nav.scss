@@ -5,20 +5,19 @@
 .nav {
   background-color: #fff;
   color: #000;
-  text-align: center;
   font-size: 20px;
-  font-family: Verdana;
+  text-align: center;
   .main-page & {
-    color: #fff;
     background-color: transparent;
+    color: #fff;
   }
 }
 
 .nav-list {
+  display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
 .nav-list-item {
@@ -27,12 +26,11 @@
 }
 
 .nav-link {
-  text-align: center;
   font-size: 20px;
-  font-family: Verdana;
+  text-align: center;
   .main-page & {
-    color: #fff;
     background-color: transparent;
+    color: #fff;
     &:hover {
       color: #df0451;
     }

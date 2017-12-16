@@ -1,21 +1,21 @@
 
 .addition-tools {
   background-color: #030c33;
-  color: #fff;
   background-image: url(../images/backgrounds/bg-addition-tools.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: 50% 50%;
-  padding-top: 50px;
-  padding-bottom: 55px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
   margin-bottom: -18px;
+  padding-bottom: 55px;
+  padding-top: 50px;
 
   &__title {
     color: #fff;
-    text-align: center;
     font-weight: 400;
     margin-bottom: 45px;
     margin-top: 0;
+    text-align: center;
   }
 }
 
@@ -24,27 +24,27 @@
   flex-wrap: wrap;
 
   &__item {
-    flex: 0 0 33.33333%;
     display: flex;
+    flex: 0 0 33.33333%;
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 18px;
   }
   &__image {
-    margin-bottom: 25px;
-    min-height: 45px;
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 25px;
+    min-height: 45px;
     .ico {
       display: block;
     }
   }
   &__description {
+    color: #ffffff;
+    display: block;
     font-size: 20px;
     line-height: 1.8;
     text-align: center;
-    color: #ffffff;
-    display: block;
   }
 }

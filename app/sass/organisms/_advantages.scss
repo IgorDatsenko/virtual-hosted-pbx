@@ -1,8 +1,8 @@
 
 
 .advantages {
-  padding-top: 60px;
   padding-bottom: 70px;
+  padding-top: 60px;
 
   &__row {
     display: flex;
@@ -16,17 +16,17 @@
 .advantage-details {
 
   &__title {
-    font-size: 24px;
     color: #000000;
-    margin-top: 0;
-    margin-bottom: 32px;
+    font-size: 24px;
     font-weight: 400;
+    margin-bottom: 32px;
+    margin-top: 0;
   }
   &__description {
-    font-size: 16px;
-    line-height: 1.5;
     color: #000000;
     display: block;
+    font-size: 16px;
+    line-height: 1.5;
   }
   &__image {
     display: block;

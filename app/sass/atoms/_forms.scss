@@ -1,7 +1,7 @@
 
 .questions-form {
-  max-width: 600px;
   margin: 0 auto;
+  max-width: 600px;
   position: relative;
 
   &__input-group {
@@ -11,18 +11,18 @@
     display: none;
   }
   &__input {
-    width: 100%;
-    font-size: 20px;
-    line-height: 1.6;
-    text-align: left;
-    color: #000;
-    height: 23px;
-    box-shadow: none;
+    background-color: transparent;
     border: 0;
     border-bottom: 1px solid rgba(0, 0, 0, .5);
-    background-color: transparent;
-    outline: none;
+    box-shadow: none;
     box-sizing: border-box;
+    color: #000;
+    font-size: 20px;
+    height: 23px;
+    line-height: 1.6;
+    outline: none;
+    text-align: left;
+    width: 100%;
     &::placeholder {
       color: #000;
     }
@@ -31,21 +31,21 @@
     }
   }
   &__textarea {
-    resize: none;
-    width: 100%;
-    box-shadow: none;
-    border: 0;
-    font-size: 20px;
-    line-height: 1.6;
-    text-align: left;
-    color: #000000;
-    border-bottom: 1px solid rgba(0, 0, 0, .5);
     background-color: transparent;
-    outline: none;
-    height: 118px;
-    display: block;
-    overflow: auto;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    box-shadow: none;
     box-sizing: border-box;
+    color: #000000;
+    display: block;
+    font-size: 20px;
+    height: 118px;
+    line-height: 1.6;
+    outline: none;
+    overflow: auto;
+    resize: none;
+    text-align: left;
+    width: 100%;
     &::placeholder {
       color: #000;
     }
@@ -59,14 +59,14 @@
     background-position: sprite-position($icons, submit-btn);
     @include retina-sprite-background(submit-btn, $retina);
 
-    position: absolute;
-    right: -50px;
-    bottom: 0;
-    text-indent: -99999px;
     background-color: transparent;
     border: 0;
-    outline: 0;
+    bottom: 0;
     box-shadow: none;
+    outline: 0;
+    position: absolute;
+    right: -50px;
+    text-indent: -99999px;
   }
 }
 
