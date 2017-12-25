@@ -1,0 +1,26 @@
+include ../_molecules/questions-form
+
+mixin contactsSection
+  section.contacts-section
+    .container
+      .contacts-section__row
+        .contacts-section__col-1
+          ul.contacts
+            li.contacts__item
+              .col-1
+                i.ico-location
+              .col-2
+                a.contacts__link(href="#") location
+            li.contacts__item
+              .col-1
+                i.ico-phone
+              .col-2
+               a.contacts__link(href="tel:+380505965907") +380 50 596 5907
+            li.contacts__item
+              .col-1
+                i.ico-email
+              .col-2
+                a.contacts__link(href="mailto:info@ai.kh.ua") info@ai.kh.ua
+        .contacts-section__col-2
+          h2.contacts-section__form-title Feedback form
+          +questions-form

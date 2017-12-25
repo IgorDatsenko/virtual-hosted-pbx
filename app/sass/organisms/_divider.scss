@@ -12,4 +12,10 @@
     margin: 0 auto;
     width: 250px;
   }
+  &.grey {
+    background-color: #000000;
+    background-image: none;
+    height: 2px;
+    opacity: 0.1;
+  }
 }

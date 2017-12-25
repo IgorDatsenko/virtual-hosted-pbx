@@ -1,0 +1,32 @@
+extends _modules/layout
+include _modules/header
+include _modules/menu
+include _modules/popup
+include _modules/copyright
+include _modules/footer
+include _modules/preview-block
+include _modules/divider
+include _modules/contactsSection
+block body
+  //wrapper starts
+  .wrapper
+    -var pageHeader = 'contacts';
+    //header starts
+    +header
+    //header ends
+    //main starts
+    main.main
+      +previewBlock({
+        title: "Contacts",
+        classes: 'preview-block--contacts'
+      })
+      +divider('full')
+      +contactsSection
+      +divider('full grey')
+    //main ends
+    //footer starts
+    +footer
+    .is-hidden
+      +popup
+    //footer ends
+  //wrapper ends

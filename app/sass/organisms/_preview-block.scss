@@ -1,0 +1,14 @@
+
+.preview-block {
+  height: 360px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    text-align: center;
+  }
+  &--contacts {
+    background-color: #261d38;
+  }
+}
