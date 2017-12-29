@@ -1,33 +1,52 @@
 //
 // Footer styles
 // --------------------------------------------------
+$m-footer: $lg-breakpoint;
 
 .footer {
   background-color: #fff;
 
   &__holder {
     display: flex;
-    padding-bottom: 30px;
-    padding-top: 50px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    flex-direction: column;
+    @media screen and (min-width: $m-footer) {
+      flex-direction: row;
+      padding-bottom: 30px;
+      padding-top: 50px;
+    }
 
     .col-1 {
       align-items: center;
       display: flex;
-      flex: 0 0 33.333333%;
       justify-content: center;
+      padding: 7px 0;
+      @media screen and (min-width: $m-footer) {
+        padding: 0;
+        flex: 0 0 33.333333%;
+      }
     }
     .col-2 {
       align-items: center;
       display: flex;
-      flex: 0 0 33.333333%;
       flex-direction: column;
       justify-content: center;
+      padding: 7px 0;
+      @media screen and (min-width: $m-footer) {
+        padding: 0;
+        flex: 0 0 33.333333%;
+      }
     }
     .col-3 {
       align-items: center;
       display: flex;
-      flex: 0 0 33.333333%;
       justify-content: center;
+      padding: 7px 0;
+      @media screen and (min-width: $m-footer) {
+        padding: 0;
+        flex: 0 0 33.333333%;
+      }
     }
   }
   &__subtitle {
@@ -39,10 +58,13 @@
 .services-footer {
   &__title {
     color: #000000;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     margin-bottom: 8px;
     margin-top: 0;
+    @media screen and (min-width: $m-footer) {
+      font-size: 20px;
+    }
   }
   &__list {
     align-items: center;
@@ -54,11 +76,14 @@
   }
   &__item {
     color: #000000;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.43;
     margin: 0;
     padding: 0;
     text-align: center;
+    @media screen and (min-width: $m-footer) {
+      font-size: 14px;
+    }
   }
 }
 .nav-footer {
@@ -75,9 +100,12 @@
   }
   &__link {
     color: #000000;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
     text-align: center;
+    @media screen and (min-width: $m-footer) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -87,15 +115,18 @@
   border-top: 1px solid rgba(0, 0, 0, .1);
   color: #999999;
   display: flex;
-  height: 50px;
+  height: 35px;
   justify-content: center;
   text-align: center;
+  @media screen and (min-width: $m-footer) {
+    height: 50px;
+  }
 }
 
 .copyright {
-  font-size: 7px;
+  font-size: 10px;
   margin-bottom: 0;
-  @media screen and (min-width: $lg-breakpoint) {
+  @media screen and (min-width: $m-footer) {
     font-size: 15px;
   }
 }

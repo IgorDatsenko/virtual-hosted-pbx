@@ -1,24 +1,40 @@
 
 .info-block {
   color: #000;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
-  padding: 50px 0 60px;
+  padding: 25px 0 35px;
   text-align: center;
+  position: relative;
+  z-index: 2;
+  @media screen and (min-width: $lg-breakpoint) {
+    padding: 50px 0 60px;
+    font-size: 20px;
+  }
 
   &__title {
     color: #000;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
-    margin-bottom: 37px;
+    margin-bottom: 20px;
     margin-top: 0;
     text-align: center;
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 40px;
+      margin-bottom: 37px;
+    }
   }
   p {
-    margin-bottom: 36px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $lg-breakpoint) {
+      margin-bottom: 36px;
+    }
   }
   .btn {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $lg-breakpoint) {
+      margin-bottom: 40px;
+    }
   }
 }
 

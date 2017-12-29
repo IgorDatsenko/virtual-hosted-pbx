@@ -2,16 +2,24 @@
 .questions-section {
   background-image: url(../images/backgrounds/bg-questions.jpg);
   background-size: cover;
-  padding-bottom: 60px;
-  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-top: 25px;
+  overflow: hidden;
+  @media screen and (min-width: $lg-breakpoint) {
+    padding-bottom: 60px;
+    padding-top: 50px;
+  }
 
   &__title {
     color: #000000;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 1;
     margin-bottom: 27px;
     margin-top: 0;
     text-align: center;
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 40px;
+    }
   }
 }

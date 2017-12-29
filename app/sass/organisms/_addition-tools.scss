@@ -7,35 +7,54 @@
   background-size: cover;
   color: #fff;
   margin-bottom: -18px;
-  padding-bottom: 55px;
-  padding-top: 50px;
+  padding-bottom: 35px;
+  padding-top: 30px;
+  @media screen and (min-width: $lg-breakpoint) {
+    padding-bottom: 55px;
+    padding-top: 50px;
+  }
 
   &__title {
     color: #fff;
     font-weight: 400;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
+    font-size: 25px;
     margin-top: 0;
     text-align: center;
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 40px;
+      margin-bottom: 45px;
+    }
   }
 }
 
 .tools {
   display: flex;
   flex-wrap: wrap;
+  @media screen and (min-width: $lg-breakpoint) {
+
+  }
 
   &__item {
     display: flex;
-    flex: 0 0 33.33333%;
+    flex: 0 0 100%;
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 18px;
+    @media screen and (min-width: $lg-breakpoint) {
+      flex: 0 0 33.33333%;
+    }
   }
   &__image {
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
-    min-height: 45px;
+    margin-bottom: 15px;
+    @media screen and (min-width: $lg-breakpoint) {
+      min-height: 45px;
+      margin-bottom: 25px;
+    }
+
     .ico {
       display: block;
     }
@@ -43,8 +62,11 @@
   &__description {
     color: #ffffff;
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.8;
     text-align: center;
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 20px;
+    }
   }
 }

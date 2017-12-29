@@ -136,11 +136,19 @@ input[type="button"] {
   background-color: #df0451;
   box-sizing: border-box;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1;
-  padding: 20px 15px 20px 15px;
+  padding: 15px 10px 15px 10px;
   text-align: center;
-  width: 350px;
+  width: 100%;
+  @media screen and (min-width: $sm-breakpoint) {
+    max-width: 350px;
+  }
+  @media screen and (min-width: $lg-breakpoint) {
+    width: 350px;
+    padding: 20px 15px 20px 15px;
+    font-size: 20px;
+  }
   &:hover {
     background-color: darken(#df0451, 5%);
     color: #fff;

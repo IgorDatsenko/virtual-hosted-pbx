@@ -1,8 +1,11 @@
 //
 // header styles
 // --------------------------------------------------
+$m-menu: $lg-breakpoint;
 
 .header {
+  overflow: hidden;
+
   .main-page & {
     position: absolute;
   }
@@ -14,8 +17,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   .main-page & {
     justify-content: center;
+
+    @media screen and (max-width: $m-menu - 1) {
+      height: auto;
+    }
+
     .logo-main {
       display: none;
     }

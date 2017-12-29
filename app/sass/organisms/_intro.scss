@@ -9,18 +9,27 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 750px;
+    height: 500px;
     justify-content: center;
+    @media screen and (min-width: $lg-breakpoint) {
+      height: 750px;
+    }
   }
   &__title {
     color: #fff;
-    font-size: 60px;
-    line-height: 1;
+    font-size: 40px;
+    line-height: 1.2;
     margin: 0;
     text-align: center;
     text-transform: uppercase;
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 60px;
+    }
   }
   .ico {
-    margin-bottom: 55px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $lg-breakpoint) {
+      margin-bottom: 55px;
+    }
   }
 }

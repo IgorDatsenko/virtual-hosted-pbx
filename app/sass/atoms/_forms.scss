@@ -2,7 +2,11 @@
 .questions-form {
   margin: 0 auto;
   max-width: 600px;
+  padding: 0 0 50px;
   position: relative;
+  @media screen and (min-width: $lg-breakpoint) {
+    padding: 0;
+  }
 
   &__input-group {
 
@@ -17,12 +21,17 @@
     box-shadow: none;
     box-sizing: border-box;
     color: #000;
-    font-size: 20px;
-    height: 30px;
+    font-size: 18px;
+    height: 25px;
     line-height: 1.6;
     outline: none;
     text-align: left;
     width: 100%;
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 20px;
+      height: 30px;
+    }
+
     &::placeholder {
       color: #000;
     }
@@ -46,6 +55,11 @@
     resize: none;
     text-align: left;
     width: 100%;
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 18px;
+      height: 90px;
+    }
+
     &::placeholder {
       color: #000;
     }
@@ -65,8 +79,15 @@
     box-shadow: none;
     outline: 0;
     position: absolute;
-    right: -50px;
+    left: 50%;
     text-indent: -99999px;
+    transform: translateX(-50%);
+    @media screen and (min-width: $lg-breakpoint) {
+      transform: translateX(0);
+      right: -50px;
+      bottom: 0;
+      left: auto;
+    }
   }
 }
 

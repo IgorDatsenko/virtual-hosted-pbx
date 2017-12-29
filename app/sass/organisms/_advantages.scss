@@ -1,15 +1,28 @@
 
 
 .advantages {
-  padding-bottom: 70px;
-  padding-top: 60px;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  @media screen and (min-width: $lg-breakpoint) {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
 
   &__row {
     display: flex;
+    flex-wrap: wrap;
   }
   &__item {
-    flex: 1 1 33.3333333%;
+    flex: 1 1 100%;
     text-align: center;
+    @media screen and (min-width: $lg-breakpoint) {
+      flex: 1 1 33.3333333%;
+    }
+  }
+  &__item + &__item {
+    @media screen and (max-width: $lg-breakpoint - 1) {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -17,20 +30,30 @@
 
   &__title {
     color: #000000;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
     margin-top: 0;
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
   }
   &__description {
     color: #000000;
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 16px;
+    }
   }
   &__image {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
+    @media screen and (min-width: $lg-breakpoint) {
+      margin-bottom: 30px;
+    }
 
     .ico {
       display: block;
