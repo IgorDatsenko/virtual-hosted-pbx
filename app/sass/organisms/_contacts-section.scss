@@ -1,20 +1,41 @@
 
 .contacts-section {
-  padding-top: 70px;
-  padding-bottom: 90px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  @media screen and (min-width: $lg-breakpoint) {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
 
   &__row {
     display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $lg-breakpoint) {
+      flex-direction: row;
+    }
   }
   &__col-1 {
-    flex: 1 1 500px;
+    flex: 1 1 100%;
+    @media screen and (min-width: $lg-breakpoint) {
+      flex: 1 1 500px;
+    }
   }
   &__col-2 {
-    flex: 1 1 600px;
+    flex: 1 1 100%;
+    @media screen and (min-width: $lg-breakpoint) {
+      flex: 1 1 600px;
+    }
   }
   &__form-title {
     margin-top: 0;
-    margin-bottom: 33px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 25px;
+    @media screen and (min-width: $lg-breakpoint) {
+      text-align: left;
+      font-size: 30px;
+      margin-bottom: 33px;
+    }
   }
 }
 
@@ -22,14 +43,21 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 20px;
+  @media screen and (min-width: $lg-breakpoint) {
+    margin-bottom: 0;
+  }
 
   &__item {
-    margin-bottom: 32px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
+    @media screen and (min-width: $lg-breakpoint) {
+      margin-bottom: 32px;
+    }
 
     &:last-child {
-      margin-bottom: 0;
+      margin-bottom: 0 !important;
     }
 
     > .col-1 {
@@ -44,11 +72,14 @@
   }
   &__link {
     color: #000000;
-    font-size: 20px;
+    font-size: 18px;
     font-stretch: normal;
     font-style: normal;
     font-weight: normal;
     letter-spacing: normal;
     line-height: 1.5;
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 20px;
+    }
   }
 }
