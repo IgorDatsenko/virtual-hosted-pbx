@@ -14,41 +14,34 @@
         mobileNavClass: 'side-nav-opened-section',
         sidebarSubSectionsClass: 'is-visible',
         noScrollClass: 'no-scroll'
-      },
-      isTouchDevice,
-      eventName;
-
-  if (typeof $ === 'function' && typeof window.utilities === 'object') {
-    eventName = window.utilities.isTouchDevice ? 'touchstart' : 'click';
-    isTouchDevice = window.utilities.isTouchDevice;
-  }
+      };
 
   // initialization of jquery placeholder
   if (navbarOpener.length) {
-    navbarOpener.on(eventName, function () {
+    navbarOpener.on('click', function () {
       var windowScrollTop = win.scrollTop();
 
       if (body.hasClass(classNames.navbarClass)) {
         // resetting properties of body element
-        body.removeClass(classNames.navbarClass + ' ' + classNames.noScrollClass);
-        body.css({'margin-top': ''});
-        win.scrollTop(parseInt(body.data('scrollTop'), 10));
+        body.removeClass(classNames.navbarClass );
+        // body.css({'margin-top': ''});
+        // win.scrollTop(parseInt(body.data('scrollTop'), 10));
       } else {
         // setting fixed position to body element
-        body.addClass(classNames.navbarClass + ' ' + classNames.noScrollClass);
-        body.data('scrollTop', windowScrollTop).css({marginTop: -windowScrollTop});
+        body.addClass(classNames.navbarClass);
+        // body.data('scrollTop', windowScrollTop).css({marginTop: -windowScrollTop});
       }
     });
   }
 
-  wrapper.on(eventName, function (event) {
+  wrapper.on('click', function (event) {
     var eventTarget = $(event.target);
 
     if (!eventTarget.closest(navbar).length && body.hasClass(classNames.navbarClass)) {
       // resetting properties of body element
-      body.removeClass(classNames.navbarClass + ' ' + classNames.noScrollClass);
-      body.css({'margin-top': ''});
-      win.scrollTop(parseInt(body.data('scrollTop'), 10));
+      body.removeClass(classNames.navbarClass);
+      // body.css({'margin-top': ''});
+      // win.scrollTop(parseInt(body.data('scrollTop'), 10));
     }
   });
 

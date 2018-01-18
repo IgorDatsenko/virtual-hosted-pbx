@@ -7,7 +7,8 @@ $m-menu: $lg-breakpoint;
   overflow: hidden;
 
   .main-page & {
-    position: absolute;
+    position: fixed;
+    z-index: 999;
   }
 }
 
@@ -17,6 +18,10 @@ $m-menu: $lg-breakpoint;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: $m-menu - 1) {
+    padding: 0 !important;
+  }
 
   .main-page & {
     justify-content: center;

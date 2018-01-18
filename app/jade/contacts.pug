@@ -8,12 +8,13 @@ include _modules/preview-block
 include _modules/divider
 include _modules/contactsSection
 block body
+  -var pageHeader = 'contacts';
+  //header starts
+  +header
+  //header ends
   //wrapper starts
   .wrapper
     -var pageHeader = 'contacts';
-    //header starts
-    +header
-    //header ends
     //main starts
     main.main
       +previewBlock({
